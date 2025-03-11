@@ -27,7 +27,7 @@
 
   
 **Class Diagram
-  +--------------------------------------------------+
+ +--------------------------------------------------+
 |                    Form1                         |
 +--------------------------------------------------+
 | - students: List<Student>                        |
@@ -35,35 +35,35 @@
 +--------------------------------------------------+
 | + Form1()                                       |
 | + LoadAdvisors(): void                          |
-| + button1_Click(sender, e): void                |
-| + button2_Click(sender, e): void                |
+| + button1_Click(sender: object, e: EventArgs): void |
+| + button2_Click(sender: object, e: EventArgs): void |
 | + UpdateStudentList(): void                     |
 | + lstStudents_SelectedIndexChanged_1(sender, e): void |
 | + UpdateStudentDisplay(student: Student): void  |
 | + btnShowAdvisorsAndStudents_Click(sender, e): void |
 +--------------------------------------------------+
-                  | 1..*      
-                  |                         
-                  v                         
+            | 1..*           
+            |                  
+            v                  
 +--------------------------------------------------+
-|                  Student                         |
+|                   Student                        |
 +--------------------------------------------------+
 | - Name: string                                   |
 | - Major: string                                  |
-| - ID: string                                    |
+| - ID: string                                     |
 | - Grade: double                                  |
 | - Advisor: Advisor                              |
 +--------------------------------------------------+
 | + Student(name: string, major: string, id: string, grade: double, advisor: Advisor) |
 +--------------------------------------------------+
-                  | 1                         
-                  |                         
-                  v                         
+            | 1                 
+            |                  
+            v                  
 +--------------------------------------------------+
-|                  Advisor                         |
+|                   Advisor                        |
 +--------------------------------------------------+
 | - Name: string                                   |
 | - Major: string                                  |
 +--------------------------------------------------+
-| + Advisor(name: string, major: string)          |
+| + Advisor(name: string, major: string)         |
 +--------------------------------------------------+
